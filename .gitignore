@@ -5,5 +5,5 @@ build/
 .idea/
 out/
 *.iml
-*ipr
-*iws
+*.ipr
+*.iws

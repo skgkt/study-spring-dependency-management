@@ -1,6 +1,6 @@
 plugins {
-    id "java"
-    id "idea"
+    java
+    idea
     id("io.spring.dependency-management") version "1.0.6.RELEASE"
 }
 
@@ -10,7 +10,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        def springBootVersion = "2.1.2.RELEASE"
+        val springBootVersion = "2.1.2.RELEASE"
         mavenBom("org.springframework.boot:spring-boot-dependencies:$springBootVersion")
     }
 }
@@ -19,7 +19,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
 }
 
-wrapper {
+tasks.wrapper {
     gradleVersion = "5.2.1"
     distributionType = Wrapper.DistributionType.BIN
 }
